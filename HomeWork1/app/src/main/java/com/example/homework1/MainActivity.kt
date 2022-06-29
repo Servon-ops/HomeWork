@@ -34,17 +34,21 @@ class MainActivity : AppCompatActivity() {
     }
     fun checkValues(){
         error?.setVisibility(TextView.INVISIBLE)
-        var newHeight = height?.text.toString().toInt()
-        var newWeight = weight?.text.toString().toDouble()
-        var newAge = age?.text.toString().toInt()
-        if (newHeight > 0 && newHeight < 250 && newAge > 0 && newAge < 150 && newWeight > 0 && newWeight < 250) {
-            //Log.e("MainActivity", "Date For " + name?.text.toString() + " is " + newHeight * newAge * newWeight)}
-            error?.setVisibility(TextView.VISIBLE)
-            error?.setText("Date For " + name?.text.toString() + " is " + newHeight * newAge * newWeight)}
-        else {
-            //Log.e("MainActivity", "ERROOOOOR")
+        if (name?.text.toString().isEmpty() || height?.text.toString().isEmpty() || weight?.text.toString().isEmpty() || age?.text.toString().isEmpty()) {
             error?.setVisibility(TextView.VISIBLE)
             error?.setText("the data is incorrect")
+        }
+        else {
+            var newHeight = height?.text.toString().toInt()
+            var newWeight = weight?.text.toString().toDouble()
+            var newAge = age?.text.toString().toInt()
+            if (newHeight > 0 && newHeight < 250 && newAge > 0 && newAge < 150 && newWeight > 0 && newWeight < 250) {
+                error?.setVisibility(TextView.VISIBLE)
+                error?.setText("Date For " + name?.text.toString() + " is " + newHeight * newAge * newWeight)}
+            else {
+                error?.setVisibility(TextView.VISIBLE)
+                error?.setText("the data is incorrect")
+            }
         }
     }
 }
