@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity() {
             var newAge = age?.text.toString().toInt()
             if (newHeight > 0 && newHeight < 250 && newAge > 0 && newAge < 150 && newWeight > 0 && newWeight < 250) {
                 error?.setVisibility(TextView.VISIBLE)
-                error?.setText("Date For " + name?.text.toString() + " is " + newHeight * newAge * newWeight)}
+                var value: String = "Date For " + name?.text.toString() + " is " + newHeight * newAge * newWeight
+                error?.setText("Ответ $value")}
             else {
                 error?.setVisibility(TextView.VISIBLE)
                 error?.setText("the data is incorrect")
