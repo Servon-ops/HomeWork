@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_sentiment_satisfied_fill0_wght400_grad0_opsz48"
+        android:title="Main" />
+    <item
+        android:id="@+id/profileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_person_fill0_wght400_grad0_opsz48"
+        android:title="Profile" />
+    <item
+        android:id="@+id/musicFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_play_arrow_fill0_wght400_grad0_opsz48"
+        android:title="Music" />
+    <item
+        android:id="@+id/friendFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_group_fill0_wght400_grad0_opsz48"
+        android:title="Friends" />
+    <item
+        android:id="@+id/messageFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_mail_fill0_wght400_grad0_opsz48"
+        android:title="Message" />
+
+
+</menu>
